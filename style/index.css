@@ -1,4 +1,4 @@
-@import url('reset.css');
+@import url('normalize.css');
 @import url('googleFonts-ProximaNova.css');
 @import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
@@ -8,7 +8,8 @@
 }
 
 html {
-    font-size: 62.50%; /* about 10px at medium font size setting in your browser */
+    font-size: 62.50%;
+    /* about 10px at medium font size setting in your browser */
 }
 
 .container {
@@ -22,7 +23,7 @@ html {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .container {
         font-size: 1rem;
     }
@@ -38,13 +39,14 @@ header h1 {
     text-transform: uppercase;
 }
 
-h4 {
-    text-transform: uppercase;
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
 }
 
-nav {
-    display: block;
-    /* height: 40px; */
+.text-intro h4 {
+    text-transform: uppercase;
 }
 
 header nav ul {
@@ -55,13 +57,21 @@ header nav ul {
 .nav-item,
 .nav-item:visited {
     border: 1px solid black;
-    padding: 8px 10px;
+    padding: 5px 10px;
     color: rgb(5, 40, 54);
     font-weight: bold;
     font-size: 1.6rem;
     width: 100px;
     text-align: center;
     text-decoration: none;
+}
+
+@media (max-width:600px) {
+
+    .nav-item,
+    .nav-item:visited {
+        font-size: 1.2rem;
+    }
 }
 
 .nav-item:hover {
@@ -84,7 +94,7 @@ main {
     border-width: 2px;
     border-color: #fff;
     text-transform: uppercase;
-    font-size: .9rem;
+    font-size: 1.2rem;
     letter-spacing: .1rem;
     font-weight: bold;
     color: teal;
@@ -100,7 +110,7 @@ main {
 }
 
 .text-intro {
-    padding: 45px;
+    padding: 4%;
 }
 
 p {
@@ -109,25 +119,43 @@ p {
 
 section {
     margin: 30px 0;
+    display: flex;
 }
 
-.projects {
+@media (max-width:500px) {
+    section {
+        flex-flow: column;
+    }
+}
+
+@media (max-width:767px) {
+    .intro img {
+        width: 70%;
+        height: 70%;
+    }
+}
+
+section.projects {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
 }
 
-.projects span {
+.project-item {
     flex: 1 0 21%;
-    display: block;
-    width: 200px;
-    padding: 10px 0 0 0;
-}
-
-.project-caption {
     text-align: center;
+    padding: 10px;
 }
 
+@media (max-width: 600px) {
+    .project-item img {
+        width: 65%;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+}
 
 footer {
     background-color: #DEEEF0;
@@ -149,4 +177,8 @@ footer nav {
 footer nav ul li {
     display: inline;
     margin: 0 5px;
+}
+
+footer h5 {
+    font-size: 1.1rem;
 }

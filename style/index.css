@@ -1,7 +1,7 @@
-@import url('normalize.css');
-@import url('googleFonts-ProximaNova.css');
-@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url("normalize.css");
+@import url("googleFonts-ProximaNova.css");
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
 * {
     box-sizing: border-box;
@@ -145,6 +145,14 @@ section.projects {
     flex: 1 0 21%;
     text-align: center;
     padding: 10px;
+}
+
+.project-item img {
+    transition: transform 0.7s ease;
+}
+
+.project-item img:hover {
+    transform: scale(1.75);
 }
 
 @media (max-width: 600px) {
